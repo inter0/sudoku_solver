@@ -78,12 +78,24 @@ if __name__ == "__main__":
                 [0, 4, 9, 2, 0, 6, 0, 0, 7]]
 
     sudoku = sudoku1
-   
+
+    for row in range(len(sudoku)):
+        for col in range(len(sudoku[row])):
+            if sudoku[row][col] != 0:
+                if not valid(sudoku, sudoku[row][col], row, col):
+                    print("Given Sudoku is not in a valid state!\nExiting Program")
+                    exit()
+    
+    print("Given Sudoku")
+    print("-"*27)
     for row in sudoku:
         print(row)
+    print("-"*27)
 
-    test = solve(sudoku)
+    solve(sudoku)
 
-    print()
+    print("\nSolution")
+    print("-"*27)
     for row in sudoku:
         print(row)
+    print("-"*27)
