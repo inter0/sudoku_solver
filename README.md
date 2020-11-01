@@ -1,2 +1,2 @@
-# sudoku_solver
+# Sudoku solver
 This is just a simple sudoku solver using backtracking in python. I want to implement a GUI with pygame but pygame doesn't support python 3.9 yet, so I will likely use a virtual enviroment with a supported python version.
